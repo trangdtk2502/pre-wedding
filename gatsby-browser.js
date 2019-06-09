@@ -1,3 +1,5 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+// add bulma for css
+import "bulma"
+import "bulma-extensions"
+import "bulma-carousel"
+import "./src/styles/custom-layout.scss"

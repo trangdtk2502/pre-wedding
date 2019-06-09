@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
+    title: `Hoang & Trang`,
+    author: `HoangVX`,
+    description: `A blogs for ours wedding.`,
+    siteUrl: `https://xxx.netlify.com/`,
+    wedding: {
+      date: '2019-07-22',
+      groom: {
+        name: 'Võ Xuân Hoàng ',
+        info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
+      },
+      bride: {
+        name: 'Đào Thị Khánh Trang',
+        info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
+      }
     },
   },
   plugins: [
@@ -68,11 +76,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    `gatsby-plugin-sass`,
   ],
 }
