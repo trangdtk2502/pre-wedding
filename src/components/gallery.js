@@ -109,35 +109,35 @@ export const pageQuery = graphql`
         }
       }
     }
-    g7: file(relativePath: { eq: "g7.JPG" }) {
+    g7: file(relativePath: { eq: "g7.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    g8: file(relativePath: { eq: "g8.JPG" }) {
+    g8: file(relativePath: { eq: "g8.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    g9: file(relativePath: { eq: "g9.JPG" }) {
+    g9: file(relativePath: { eq: "g9.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    g10: file(relativePath: { eq: "g10.JPG" }) {
+    g10: file(relativePath: { eq: "g10.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    g11: file(relativePath: { eq: "g11.JPG" }) {
+    g11: file(relativePath: { eq: "g11.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
           ...GatsbyImageSharpFluid_noBase64
