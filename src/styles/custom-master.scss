@@ -1,0 +1,40 @@
+/**
+FONTS START
+**/
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+$font-pacifico: 'Pacifico', cursive;
+$font-dancing:  'Dancing Script', cursive;
+$font-vibes:    'Great Vibes', cursive;
+$font-sriracha: 'Sriracha', cursive;
+
+/**
+FONTS END
+**/
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.15,1.15);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}

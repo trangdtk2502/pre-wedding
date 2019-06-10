@@ -11,7 +11,7 @@ module.exports = {
         info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
       },
       bride: {
-        name: 'Đào Thị Khánh Trang',
+        name: 'Đào Thi Khánh Trang',
         info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
       }
     },
