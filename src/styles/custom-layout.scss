@@ -84,16 +84,6 @@
         font-weight: 400;
         font-size: 60px;
         color: #222222;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 10px;
-          right: 0px;
-          width: 70%;
-          border-bottom: 1px solid #f07677;
-        }
       }
     }
 
@@ -225,5 +215,31 @@
       font-style: italic;
       color: #797979;
     }
+  }
+}
+
+.ht-place-map {
+  margin-top: 30px;
+  height: calc((100vh - 350px) / 2);
+
+  .ht-right {
+    justify-content: flex-end;
+    text-align: right !important;
+    padding-right: 20px;
+  }
+  .ht-left {
+    justify-content: flex-start;
+    text-align: left !important;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-family: $font-sriracha;
+    font-size: 1.8em;
+  }
+
+  p {
+    font-family: $font-dancing;
+    font-size: 1.1em;
   }
 }
