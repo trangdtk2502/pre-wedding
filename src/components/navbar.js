@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/custom-navbar.scss"
 
@@ -14,18 +14,12 @@ const NavBar = () => (
         <div className="navbar-menu">
           <div className="navbar-end">
             <div className="navbar-item">
-              <a className="navbar-item">
-                Home
-              </a>
-              <a className="navbar-item">
-                Gallery
-              </a>
-              <a className="navbar-item">
+              <Link className="navbar-item" to={`/`}>
+                Top
+              </Link>
+              <Link className="navbar-item" to={`/stories`}>
                 Stories
-              </a>
-              <a className="navbar-item">
-                About
-              </a>
+              </Link>
             </div>
           </div>
         </div>

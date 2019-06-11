@@ -8,11 +8,19 @@ module.exports = {
       date: '2019-07-22',
       groom: {
         name: 'Võ Xuân Hoàng ',
-        info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
+        info: [
+          'Là kỹ sư công nghệ thông tin. Hiện tại đang sống và làm việc tại sứ sở hoa anh đào.',
+          'Chơi game rất pro :), đặt biệt là liên minh huyền thoại.',
+          'Tính cách hướng nội, nhưng hoà đồng với mọi người'
+        ]
       },
       bride: {
         name: 'Đào Thi Khánh Trang',
-        info: 'Because the image is fixed in size, you can use an image that is four times as big. So for example, in a 128x128 container, you can use a 256x256 image, but resized'
+        info: [
+          'Là kỹ sư công nghệ thông tin. Hiện tại đang làm việc tại nhật bản.',
+          'Yêu thích kinh doanh và shopping.',
+          'Tính cách hoà đồng với mọi người, và yêu ghét rõ ràng.'
+        ]
       }
     },
   },
@@ -77,5 +85,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`,
   ],
 }

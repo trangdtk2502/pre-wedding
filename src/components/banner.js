@@ -1,7 +1,7 @@
 import React, { Children } from "react"
 
-const Banner = ({ children, bgClass, ...props }) => (
-  <section className={`hero is-fullheight ${bgClass}`}
+const Banner = ({ children, bgClass, sizeClass, ...props }) => (
+  <section className={`hero ${sizeClass ? sizeClass : 'is-fullheight'} ${bgClass}`}
     {...props}
   >
     {children}

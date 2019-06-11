@@ -1,20 +1,27 @@
 /**
-FONTS START
+FONTS
 **/
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
 $font-pacifico: 'Pacifico', cursive;
 $font-dancing:  'Dancing Script', cursive;
 $font-vibes:    'Great Vibes', cursive;
 $font-sriracha: 'Sriracha', cursive;
+$font-noto: 'Noto Serif', serif;
 
 /**
-FONTS END
+COLORS
 **/
+$ht-white:      #fff;
+$ht-lightred:   #f07677;
 
+/**
+ANIMATIONS
+**/
 @keyframes zoominoutsinglefeatured {
   0% {
       transform: scale(1,1);

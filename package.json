@@ -8,6 +8,10 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "bourbon": "^5.1.0",
     "bulma": "^0.7.5",
     "bulma-carousel": "^4.0.4",
@@ -23,6 +27,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.1.1",
+    "gatsby-plugin-transition-link": "^1.12.4",
     "gatsby-plugin-transitions": "^1.9.0",
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-images": "^3.0.13",
@@ -38,7 +43,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-spring": "^9.0.0-beta.10",
+    "react-spring": "^9.0.0-beta.12",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54"
   },

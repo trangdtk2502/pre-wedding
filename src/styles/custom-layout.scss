@@ -1,5 +1,13 @@
 @import 'custom-master';
 
+/**
+SHARED
+**/
+p {
+  font-family: $font-noto;
+}
+
+
 .ht-banner-bg {
   background: url(./banner/1.jpg);
   background-position: center center;
@@ -29,6 +37,26 @@
 
 .ht-pattern-bg2 {
   background: #0c0c0c;
+}
+
+.ht-pattern-bg3 {
+  background: url(./pattern/4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.ht-mask {
+  content: "";
+  position: absolute;
+  background: url(./pattern/5.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
 }
 
 .ht-title {
@@ -211,7 +239,6 @@
 
     p {
       font-size: 18px;
-      font-family: 'Lora', serif;
       font-style: italic;
       color: #797979;
     }
@@ -239,7 +266,70 @@
   }
 
   p {
-    font-family: $font-dancing;
     font-size: 1.1em;
+  }
+}
+
+.ht-guest {
+  margin-top: 20px;
+  div {
+    justify-content: center;
+  }
+
+  .ht-somewords {
+    justify-content: flex-start;
+    h1 {
+      color: $ht-lightred;
+      font-size: 40px;
+    }
+    p {
+      padding: 0 20px;
+      color: $ht-white;
+    }
+  }
+
+  .ht-form {
+    min-height: calc(100vh - 300px);
+  }
+}
+
+.ht-fb {
+  div {
+    justify-content: center;
+    align-items: center;
+
+    a {
+      padding: 5px 0;
+      font-family: $font-sriracha;
+      color: $ht-lightred;
+    }
+  }
+}
+
+.ht-divide-vertical {
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 50%;
+    background-color: #797979;
+    width: 1px;
+    z-index: -1;
+  }
+  
+  h4 {
+    display: inline-block;
+    width: auto;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: $font-dancing;
+    padding: 5px 0px;
+    background-color: #ffffff;
   }
 }
