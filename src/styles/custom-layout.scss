@@ -30,6 +30,13 @@ p {
   }
 }
 
+.ht-banner-bg-stories {
+  background: url(./banner/g11.jpg);
+  background-position: center 52%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .ht-pattern-bg1 {
   background: url(./pattern/3.jpg);
   background-repeat: repeat;
@@ -278,13 +285,16 @@ p {
 
   .ht-somewords {
     justify-content: flex-start;
+    padding: 0 40px;
     h1 {
       color: $ht-lightred;
+      font-family: $font-dancing;
       font-size: 40px;
     }
     p {
-      padding: 0 20px;
+      padding: 10px 0px;
       color: $ht-white;
+      text-align: left;
     }
   }
 
@@ -331,5 +341,13 @@ p {
     font-family: $font-dancing;
     padding: 5px 0px;
     background-color: #ffffff;
+  }
+}
+
+
+.ht-breadcrumb {
+  h1  {
+    font-family: $font-dancing;
+    color: $ht-white;
   }
 }

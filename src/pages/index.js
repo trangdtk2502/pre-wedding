@@ -93,7 +93,7 @@ class TopPage extends React.Component {
                     <p></p>
                   </div>
                   <div className="tile is-4 is-vertical ht-card-info">
-                    <p>We Inviting You And Your Family On</p>
+                    <h3>Thân mời bạn và gia đình đến chung vui cùng chúng tớ </h3>
                     <h3>{ weddingDateFmt }</h3>
                     <h1>SAVE THE DATE</h1>
                     <p>At St. Thomas's Church, London, U.K.</p>
@@ -112,7 +112,7 @@ class TopPage extends React.Component {
                 </div>
                 <div className="tile is-vertical ">
                   <div className="ht-divide">
-                    <h4>Đừng Bỏ Lỡ! Chỉ Còn
+                    <h4><b>Đừng Bỏ Lỡ! Chỉ Còn </b>
                     </h4>
                   </div>
                   <div className="tile ht-countdowm">
@@ -134,7 +134,7 @@ class TopPage extends React.Component {
                     </div>
                   </div>
                   <div className="ht-divide">
-                    <h4>Là Đến Ngày Chúng Tớ Về Chung Một Nhà!</h4>
+                    <h4><b>Là Chúng Tớ Về Chung Một Nhà Rồi Đấy!</b></h4>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ class TopPage extends React.Component {
                       <div className="tile ht-left">
                         <div>
                           <h1>Tư Gia Nhà Gái</h1>
-                          <p>125 Phan Chu Trinh, Đồng Mỹ, Đồng Hới, Quảng Bình, Việt Nam</p>
+                          <p>25 Phan Chu Trinh, Đồng Mỹ, Đồng Hới, Quảng Bình, Việt Nam</p>
                         </div>
                       </div>
                     </div>
@@ -210,19 +210,29 @@ class TopPage extends React.Component {
             <div className="container is-widescreen">
               <div className="tile is-vertical ht-padtop">
                 <div className="tile ht-gallery-title">
-                  <h1>Tham Gia | Gửi Lời Chúc</h1>
+                  <h1>Thân mời | Gửi Lời Chúc</h1>
                 </div>
                 <div className="tile ht-gallery-title">
                   <Img fixed={data.headding.childImageSharp.fixed} />
                 </div>
                 <div className="tile ht-guest">
-                  <div className="tile is-vertical ht-somewords">
-                    <h1>Lời Ngỏ </h1>
-                    <p>
-                      Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản. Đoạn văn bản này không những đã tồn tại năm thế kỉ, mà khi được áp dụng vào tin học văn phòng, nội dung của nó vẫn không hề bị thay đổi. Nó đã được phổ biến trong những năm 1960 nhờ việc bán những bản giấy Letraset in những đoạn Lorem Ipsum, và gần đây hơn, được sử dụng trong các ứng dụng dàn trang, như Aldus PageMaker
+                  <div className="tile is-6 is-vertical ht-somewords">
+                    <h1>Thân Mời</h1>
+                    <p> 
+                      Do khoảng cách địa lý, công việc và nhiều lý do khác khiến chúng mình không thể về nước sớm để trao tận tay mọi người những tấm thiệp hồng.
                     </p>
+                    <p>
+                      Cả hai đã cùng dốc sức chuẩn bị trang web này để gửi lời mời đến tất cả bạn bè, người thân cùng đến chung vui trong ngày vui của chúng mình!
+                    </p>
+                    <p>
+                      Sự có mặt của mọi người sẽ góp phần tạo nên một lễ cưới đặc biệt nhiều niềm vui và bạn sẽ là những người đồng hành cùng chúng mình trong cột móc quan trọng nhất của cuộc đời. 
+                    </p>
+                    <p>  
+                      Nếu yêu thương cả hai thì hãy dành thời gian đến chung vui cùng chúng mình nhé! 
+                    </p>
+                    <h1 className="has-text-right">Trân trọng!</h1>
                   </div>
-                  <div className="tile ht-form">
+                  <div className="tile is-6 ht-form">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgFpQKSSHddqeJsIo792liorHnSiW8XTfuiJx39cHPNdrqWQ/viewform?embedded=true" width="640" height="628" frameBorder="0" marginHeight="0" marginWidth="0">Đang tải...</iframe>
                   </div>
                 </div>
