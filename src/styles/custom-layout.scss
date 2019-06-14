@@ -7,6 +7,10 @@ p {
   font-family: $font-noto;
 }
 
+h1 {
+  font-family: $font-dancing;
+}
+
 
 .ht-banner-bg {
   background: url(./banner/1.jpg);
@@ -114,7 +118,6 @@ p {
     .ht-card-title {
       h1 {
         display: inline-block;
-        font-family: 'Great Vibes', cursive;
         line-height: 1.1;
         font-weight: 400;
         font-size: 60px;
