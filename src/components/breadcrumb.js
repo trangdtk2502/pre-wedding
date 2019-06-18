@@ -5,7 +5,7 @@ const BreadCrumb = ({ root, page }) => {
     <section className={`hero is-medium ht-banner-bg-stories`}>
       <div className="hero-body">
         <div className="container is-widescreen ht-breadcrumb">
-          <h1 className="is-size-1">Câu Chuyện Của Chúng Tớ</h1>
+          <h1 className="is-size-1">Câu chuyện tình yêu</h1>
           { root && page ? (
               <nav className="breadcrumb" aria-label="breadcrumbs">
                 <ul>

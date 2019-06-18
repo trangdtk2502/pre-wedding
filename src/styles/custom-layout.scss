@@ -7,7 +7,7 @@ p {
   font-family: $font-noto;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: $font-dancing;
 }
 
@@ -17,6 +17,9 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include mobile-only {
+    background-position: 77% center;
+  }
 
   .ht-snow {
     background: none;
@@ -31,6 +34,12 @@ h1 {
     -moz-animation: snow 10s linear infinite;
     -ms-animation: snow 10s linear infinite;
     animation: snow 10s linear infinite;
+  }
+
+  .ht-top-banner {
+    @include mobile-only {
+      align-items: flex-end !important;
+    }
   }
 }
 
@@ -166,6 +175,12 @@ h1 {
         font-family: 'Lora', serif;
         margin: 10px 0px 10px 0px;
       }
+
+      h2 {
+        font-size: 30px;
+        color: #f07677;
+        margin: 10px 0px 10px 0px;
+      }
     }
 
     .ht-card-profile {
@@ -180,28 +195,6 @@ h1 {
         line-height: 1.1;
         font-weight: 400;
       }
-
-      // figure {
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     bottom: 0px;
-      //     left: 0;
-      //     right: -80px;
-      //     margin: 0px auto;
-      //     background-color: #f07677;
-      //     height: 150px;
-      //     -webkit-border-radius: 0px 0px 150px 150px;
-      //     -moz-border-radius: 0px 0px 150px 150px;
-      //     border-radius: 0px 0px 150px 150px;
-      //     width: 285px;
-      //     z-index: -1;
-      //     -webkit-transform: rotate(-45deg);
-      //     -ms-transform: rotate(-45deg);
-      //     -o-transform: rotate(-45deg);
-      //     transform: rotate(-45deg);
-      //   }
-      // }
     }
   }
 }
@@ -303,6 +296,12 @@ h1 {
 
   .ht-form {
     min-height: calc(100vh - 300px);
+
+    @include mobile-only {
+      iframe {
+        height: calc(100vh + 50px);
+      }
+    }
   }
 }
 
@@ -352,5 +351,94 @@ h1 {
   h1  {
     font-family: $font-dancing;
     color: $ht-white;
+  }
+}
+
+.ht-stories-item {
+  .ht-story-left,
+  .ht-story-right {
+    height: calc(100vh / 3);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    @include mobile-only {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  .ht-story-left {
+    float: left;
+    text-align: right;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .ht-story-right {
+    float: right;
+    text-align: left;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 15px;
+    font-style: italic;
+    svg {
+      color: $ht-lightred;
+      margin: 0 5px;
+    }
+  }
+  a {
+    margin-top: 15px;
+  }
+  p {
+    color: $ht-grey;
+    padding: 10px 0;
+  }
+  .ht-story-img {
+    width: 80%;
+    border-radius: 0 50px;
+    @include mobile-only {
+      width: 100%;
+      border-radius: 40px;
+    }
+  }
+
+  .button {
+    font-family: $font-spectral;
+  }
+}
+
+.ht-blog {
+  text-align: left;
+
+  p.ht-story-date {
+    font-size: 15px;
+    font-style: italic;
+    text-align: right;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.5em;
   }
 }

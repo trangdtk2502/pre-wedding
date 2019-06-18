@@ -9,17 +9,13 @@ module.exports = {
       groom: {
         name: 'Võ Xuân Hoàng ',
         info: [
-          'Là kỹ sư công nghệ thông tin. Hiện tại đang sống và làm việc tại sứ sở hoa anh đào.',
-          'Chơi game rất pro :), đặt biệt là liên minh huyền thoại.',
-          'Tính cách hướng nội, nhưng hoà đồng với mọi người'
+          'Là kỹ sư công nghệ thông tin. Đang làm việc và sinh sống tại Nhật Bản. chơi game rất pro, đặt biệt là liên minh huyền thoại. Là một người hoà đồng với mọi người nhưng lại sống rất nội tâm.'
         ]
       },
       bride: {
         name: 'Đào Thi Khánh Trang',
         info: [
-          'Là kỹ sư công nghệ thông tin. Hiện tại đang làm việc tại nhật bản.',
-          'Yêu thích kinh doanh và shopping.',
-          'Tính cách hoà đồng với mọi người, và yêu ghét rõ ràng.'
+          'Là kỹ sư công nghệ thông tin. Hiện tại đang làm việc tại Nhật Bản. Là người hoà đồng, yêu màu hồng, ghét sự giả dối, thích tụ tập với bạn bè, yêu thích kinh doanh và shopping.',
         ]
       }
     },

@@ -1,9 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import moment from "moment"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 import SEO from "../components/seo"
 import Banner from "../components/banner";
@@ -57,10 +54,10 @@ class TopPage extends React.Component {
         <SEO title="Top" />
         <Banner bgClass="ht-banner-bg">
           <div className="ht-snow"/>
-          <div className="hero-body">
+          <div className="hero-body ht-top-banner">
             <div className="tile">
               <div className="tile is-vertical is-8 ht-title">
-                <Img fixed={data.names.childImageSharp.fixed} />
+                <Img className="is-hidden-mobile" fixed={data.names.childImageSharp.fixed} />
                 <h3>{ weddingDateFmt }</h3>
                 <h1>SAVE THE DATE</h1>
                 <Img fixed={data.headding.childImageSharp.fixed} />
@@ -74,7 +71,7 @@ class TopPage extends React.Component {
             <div className="container is-widescreen">
               <div className="tile is-vertical ht-padtop">
                 <div className="tile ht-card-title">
-                  <h1>Invitation</h1>
+                  <h1>Ngày chung đôi</h1>
                 </div>
                 <div className="tile ht-card-title">
                   <Img fixed={data.headding.childImageSharp.fixed} />
@@ -85,18 +82,20 @@ class TopPage extends React.Component {
                       <Img className="is-rounded" fixed={data.groom.childImageSharp.fixed} />
                     </figure>
                     <h2>{ data.site.siteMetadata.wedding.groom.name }</h2>
-                    {
-                      data.site.siteMetadata.wedding.groom.info.map(i => (
-                        <p>{i}</p>
-                      ))
-                    }
+                    <div>
+                      {
+                        data.site.siteMetadata.wedding.groom.info.map(i => (
+                          <p key={i}>{i}</p>
+                        ))
+                      }
+                    </div>
                     <p></p>
                   </div>
                   <div className="tile is-4 is-vertical ht-card-info">
-                    <h3>Thân mời bạn và gia đình đến chung vui cùng chúng tớ </h3>
+                    <h2>Sau 3 năm 7 tháng 15 ngày yêu nhau, chúng tớ đã quyết định </h2>
                     <h3>{ weddingDateFmt }</h3>
                     <h1>SAVE THE DATE</h1>
-                    <p>At St. Thomas's Church, London, U.K.</p>
+                    {/* <p>Việt Nam</p> */}
                   </div>  
                   <div className="tile is-vertical ht-card-profile">
                     <figure className="image">
@@ -105,7 +104,7 @@ class TopPage extends React.Component {
                     <h2>{ data.site.siteMetadata.wedding.bride.name }</h2>
                     {
                       data.site.siteMetadata.wedding.bride.info.map(i => (
-                        <p>{i}</p>
+                        <p key={i}>{i}</p>
                       ))
                     }
                   </div>
@@ -245,30 +244,18 @@ class TopPage extends React.Component {
             <div className="container is-widescreen">
               <div className="tile ht-fb">
                 <div className="tile is-vertical">
-                  <FontAwesomeIcon size="6x" icon={faFacebook} color="#4267b2" />
+                  <img src="http://graph.facebook.com/100001147277648/picture?type=normal" />
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100001147277648">
-                    <span className="icon">
-                      <img src="http://graph.facebook.com/100001147277648/picture?type=square" />
-                    </span>
                     <span> hoangvx</span>
-                  </a>
-                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100009074477752">
-                    <span className="icon">
-                      <img src="http://graph.facebook.com/100009074477752/picture?type=square" />
-                    </span>
-                    <span> Trang</span>
                   </a>
                 </div>
                 <div className="tile is-1 ht-divide-vertical">
                   <h4>OR</h4>
                 </div>
                 <div className="tile is-vertical">
-                  <FontAwesomeIcon size="6x" icon={faEnvelope} color="#4267b2" />
-                  <a href="mailto:hoang.vx@outlook.jp?subject=[Wedding] FAQ">
-                    hoang.vx@outlook.jp
-                  </a>
-                  <a href="mailto:trangdtk93@gmail.com?subject=[Wedding] FAQ">
-                    trangdtk93@gmail.com
+                  <img src="http://graph.facebook.com/100009074477752/picture?type=normal" />
+                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100009074477752">
+                    <span> Trang</span>
                   </a>
                 </div>
               </div>

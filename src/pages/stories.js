@@ -1,11 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../layouts"
 import SEO from "../components/seo"
 import Banner from "../components/banner";
 import BreadCrumb from "../components/breadcrumb";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 class Stories extends React.Component {
   render() {
@@ -28,29 +31,25 @@ class Stories extends React.Component {
               <div className="tile is-vertical">
                 {posts.map(({ node }, idx) => {
                   const title = node.frontmatter.title || node.fields.slug
-                  if (idx % 2 == 0) { 
-                    return (
-                        <div key={node.fields.slug} className="tile">
-                          <div className="tile">
-                            <Img fixed={node.frontmatter.thumbnail.childImageSharp.fixed} />
-                          </div>
-                          <div className="tile">
-                            
-                          </div>
-                        </div>
-                      )
-                   } else {
-                    return (
-                      <div key={node.fields.slug} className="tile">
-                        <div className="tile">
-                          
-                        </div>
-                        <div className="tile">
-                          <Img fixed={node.frontmatter.thumbnail.childImageSharp.fixed} />
-                        </div>
+                  const isOdd = idx % 2 !== 0
+                  return (
+                    <div key={node.fields.slug} className="ht-stories-item">
+                      <div className={ isOdd ? 'ht-story-left' : 'ht-story-right' }>
+                        <Img className="ht-story-img" fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
                       </div>
-                    )
-                   }
+                      <div className={ isOdd ? 'ht-story-right' : 'ht-story-left' }>
+                        <h1>{node.frontmatter.title}</h1>
+                        <h3><FontAwesomeIcon icon={faCalendar} />{node.frontmatter.date}</h3>
+                        <p>{node.excerpt}</p>
+                        <Link className="button is-outlined is-link" to={`stories/${node.fields.slug}`}>
+                          <span>Đọc Tiếp</span>
+                          <span className="icon">
+                            <FontAwesomeIcon icon={faArrowRight} />
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  )
                 })}
               </div>
             </div>
@@ -80,7 +79,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 300)
           fields {
             slug
           }
@@ -92,8 +91,8 @@ export const pageQuery = graphql`
               id
               publicURL
               childImageSharp {
-                fixed(height: 200, width: 300) {
-                  ...GatsbyImageSharpFixed
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

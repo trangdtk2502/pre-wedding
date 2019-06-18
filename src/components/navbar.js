@@ -3,30 +3,50 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/custom-navbar.scss"
 
-const NavBar = () => (
-  <StaticQuery
-    query={pageQuery}
-    render={data => (
-      <nav className="navbar is-fixed-top ht-navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand ht-logo">
-          <Img fixed={ data.logo.childImageSharp.fixed } /> 
-        </div>
-        <div className="navbar-menu">
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <Link className="navbar-item" to={`/`}>
-                Top
-              </Link>
-              <Link className="navbar-item" to={`/stories`}>
-                Stories
-              </Link>
+class NavBar extends React.Component {
+  state = {
+    activeMenu: false,
+  };
+
+  toggleMenu = () => {
+    this.setState({
+      activeMenu: !this.state.activeMenu,
+    });
+  };
+
+  render() {
+    return (
+      <StaticQuery
+        query={pageQuery}
+        render={data => (
+          <nav className="navbar is-fixed-top ht-navbar" role="navigation" aria-label="main navigation">
+            <div className="navbar-brand ht-logo">
+              <Img className="ht-brand" fluid={ data.logo.childImageSharp.fluid } /> 
+              <a role="button" onClick={this.toggleMenu} className={`navbar-burger burger ${this.state.activeMenu ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" data-target="ht-navbar-mobile">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
-          </div>
-        </div>
-      </nav>
-    )}
-  />
-)
+            
+            <div className={`navbar-menu ht-navbar-menu ${this.state.activeMenu ? 'is-active' : ''}`} id="ht-navbar-mobile">
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <Link className="navbar-item" to={`/`}>
+                    H&T
+                  </Link>
+                  <Link className="navbar-item" to={`/stories`}>
+                    Love Stories
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </nav>
+        )}
+      />
+    )
+  }
+}
 
 export default NavBar
 
@@ -36,6 +56,9 @@ export const pageQuery = graphql`
       childImageSharp {
         fixed(width: 300, height: 70) {
           ...GatsbyImageSharpFixed
+        }
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
